@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Admin Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f3f4f6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: #1f2937;
+            margin-bottom: 20px;
+        }
+
+        .cards {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            flex: 1;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h3 {
+            margin: 0 0 10px 0;
+            color: #6b7280;
+            font-size: 0.9rem;
+        }
+
+        .card .value {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #111827;
+        }
+
+        .chart-container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        th,
+        td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        th {
+            background: #f9fafb;
+            color: #374151;
+            font-weight: 500;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        .confidence-low {
+            color: #dc2626;
+            font-weight: 500;
+        }
+
+        .confidence-high {
+            color: #059669;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Admin Dashboard</h1>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Total Conversations</h3>
+                <div class="value" id="total-chats">-</div>
+            </div>
+            <div class="card">
+                <h3>Avg Confidence</h3>
+                <div class="value" id="avg-conf">-</div>
+            </div>
+        </div>
+
+        <div class="chart-container">
+            <canvas id="intentChart"></canvas>
+        </div>
+
+        <h2>Recent Interactions</h2>
+        <table id="logs-table">
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>User Query</th>
+                    <th>Intent</th>
+                    <th>Confidence</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Rows here -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        async function loadData() {
+            try {
+                const statsReq = await fetch('/api/admin/stats');
+                const logsReq = await fetch('/api/admin/logs');
+
+                if (statsReq.status === 401 || logsReq.status === 401) {
+                    alert("Unauthorized. Please log in.");
+                    return;
+                }
+
+                const stats = await statsReq.json();
+                const logs = await logsReq.json();
+
+                // Update Cards
+                document.getElementById('total-chats').textContent = stats.total_chats;
+                document.getElementById('avg-conf').textContent = (stats.avg_confidence * 100).toFixed(1) + '%';
+
+                // Render Chart
+                const ctx = document.getElementById('intentChart').getContext('2d');
+                new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: Object.keys(stats.intents),
+                        datasets: [{
+                            label: '# of queries',
+                            data: Object.values(stats.intents),
+                            backgroundColor: '#6366f1'
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        plugins: { legend: { display: false }, title: { display: true, text: 'Intent Distribution' } }
+                    }
+                });
+
+                // Render Table
+                const tbody = document.querySelector('#logs-table tbody');
+                tbody.innerHTML = '';
+                logs.forEach(log => {
+                    const tr = document.createElement('tr');
+                    const confClass = log.confidence < 0.6 ? 'confidence-low' : 'confidence-high';
+                    const date = new Date(log.timestamp).toLocaleString();
+                    tr.innerHTML = `
+                        <td>${date}</td>
+                        <td>${log.user_message}</td>
+                        <td>${log.intent}</td>
+                        <td class="${confClass}">${(log.confidence * 100).toFixed(1)}%</td>
+                    `;
+                    tbody.appendChild(tr);
+                });
+
+            } catch (e) {
+                console.error("Error loading data", e);
+            }
+        }
+
+        loadData();
+    </script>
+</body>
+
+</html>

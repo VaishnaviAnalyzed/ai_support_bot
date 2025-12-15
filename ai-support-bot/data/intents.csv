@@ -1,0 +1,122 @@
+text,intent
+"Hello",Greetings
+"Hi there",Greetings
+"Good morning",Greetings
+"Good afternoon",Greetings
+"Good evening",Greetings
+"Hey",Greetings
+"Hi",Greetings
+"Greetings",Greetings
+"Hello support",Greetings
+"Hi helper",Greetings
+"Is anyone there?",Greetings
+"Yo",Greetings
+"Hello chat",Greetings
+"Hiya",Greetings
+"Howdy",Greetings
+"What's up?",Greetings
+"Hello friend",Greetings
+"Hi bot",Greetings
+"Good day",Greetings
+"Start chat",Greetings
+"How do I reset my password?",Reset Password
+"I forgot my password",Reset Password
+"Can you help me change my password?",Reset Password
+"Reset code not working",Reset Password
+"Where is the password reset link?",Reset Password
+"I need a new password",Reset Password
+"Locked out of my account",Reset Password
+"Change account password",Reset Password
+"Password help",Reset Password
+"My password isn't working",Reset Password
+"Send me a password reset email",Reset Password
+"Update my login credentials",Reset Password
+"Recover my account",Reset Password
+"I can't log in",Reset Password
+"Login issues",Reset Password
+"Forgot credentials",Reset Password
+"Need to set a new password",Reset Password
+"Password recovery",Reset Password
+"How to change my passcode",Reset Password
+"Access denied, forgot password",Reset Password
+"Where is my order?",Shipping Status
+"Track my package",Shipping Status
+"Check shipping status",Shipping Status
+"Has my order shipped yet?",Shipping Status
+"When will my delivery arrive?",Shipping Status
+"Order status update",Shipping Status
+"My package is late",Shipping Status
+"Tracking number lookup",Shipping Status
+"Shipping delay inquiry",Shipping Status
+"Where's my stuff?",Shipping Status
+"Delivery date check",Shipping Status
+"Status of order #12345",Shipping Status
+"Is my order in transit?",Shipping Status
+"Package location",Shipping Status
+"Why is my shipping taking so long?",Shipping Status
+"ETA for my order",Shipping Status
+"Track shipment",Shipping Status
+"Did you ship my items?",Shipping Status
+"Delivery status",Shipping Status
+"Where is my parcel?",Shipping Status
+"What is your refund policy?",Refund Policy
+"I want to return a product",Refund Policy
+"Can I get a refund?",Refund Policy
+"How do I request a refund?",Refund Policy
+"Return policy details",Refund Policy
+"Money back guarantee?",Refund Policy
+"I'm not happy with my purchase, refund me",Refund Policy
+"Process a return",Refund Policy
+"Are returns free?",Refund Policy
+"How long do refunds take?",Refund Policy
+"Return item for cash",Refund Policy
+"Exchange or refund",Refund Policy
+"Policy on damaged items",Refund Policy
+"Can I return a sale item?",Refund Policy
+"I need my money back",Refund Policy
+"Refund for late delivery",Refund Policy
+"Return window",Refund Policy
+"Restocking fee for returns",Refund Policy
+"Do you offer full refunds?",Refund Policy
+"Product return instructions",Refund Policy
+"What are the specs of this laptop?",Product Specs
+"Tell me about the battery life",Product Specs
+"How much RAM does it have?",Product Specs
+"Screen resolution details",Product Specs
+"Is it waterproof?",Product Specs
+"Dimensions of the product",Product Specs
+"Technical specifications",Product Specs
+"Does it support 5G?",Product Specs
+"Operating system version",Product Specs
+"Camera megapixels",Product Specs
+"Processor speed",Product Specs
+"Storage capacity",Product Specs
+"Compatibility with Mac",Product Specs
+"Weight of the device",Product Specs
+"Color options available",Product Specs
+"Material used",Product Specs
+"Connectivity ports",Product Specs
+"Warranty information",Product Specs
+"What's in the box?",Product Specs
+"Power consumption",Product Specs
+"Can I upgrade the memory?",Product Specs
+"ok",Acknowledgement
+"okay",Acknowledgement
+"thanks",Acknowledgement
+"thank you",Acknowledgement
+"got it",Acknowledgement
+"understood",Acknowledgement
+"great, thanks",Acknowledgement
+"cool",Acknowledgement
+"sounds good",Acknowledgement
+"perfect",Acknowledgement
+"appreciated",Acknowledgement
+"thx",Acknowledgement
+"k",Acknowledgement
+"alright",Acknowledgement
+"will do",Acknowledgement
+"thanks for the help",Acknowledgement
+"that works",Acknowledgement
+"ok thanks",Acknowledgement
+"confirm",Acknowledgement
+"i see",Acknowledgement

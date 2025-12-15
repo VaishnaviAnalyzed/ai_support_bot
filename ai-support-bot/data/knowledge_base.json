@@ -1,0 +1,104 @@
+[
+  {
+    "id": "refund_policy_overview",
+    "category": "Refund Policy",
+    "topic": "General Refund Policy",
+    "content": " We offer a 30-day money-back guarantee on all products. If you are not completely satisfied with your purchase, you can return it for a full refund within 30 days of receipt."
+  },
+  {
+    "id": "refund_process",
+    "category": "Refund Policy",
+    "topic": "How to Request a Refund",
+    "content": "To initiate a return, log in to your account, go to 'Order History', select the item you wish to return, and click 'Request Refund'. You will receive a return shipping label via email."
+  },
+  {
+    "id": "refund_timeline",
+    "category": "Refund Policy",
+    "topic": "Refund Timeline",
+    "content": "Once we receive your returned item, please allow 5-7 business days for us to process your refund. The funds will be returned to your original payment method."
+  },
+  {
+    "id": "shipping_standard",
+    "category": "Shipping Status",
+    "topic": "Standard Shipping Time",
+    "content": "Standard shipping typically takes 3-5 business days within the continental US. International shipping may take 10-14 business days."
+  },
+  {
+    "id": "shipping_tracking",
+    "category": "Shipping Status",
+    "topic": "Tracking Your Order",
+    "content": "You can track your order status by visiting the 'Track Order' page on our website and entering your order number and email address. Tracking updates are sent via email."
+  },
+  {
+    "id": "shipping_missing",
+    "category": "Shipping Status",
+    "topic": "Missing Package",
+    "content": "If your package is marked as delivered but you haven't received it, please check with neighbors and your local post office. If it is still missing after 48 hours, contact support."
+  },
+  {
+    "id": "password_reset_howto",
+    "category": "Reset Password",
+    "topic": "How to Reset Password",
+    "content": "To reset your password, click on the 'Forgot Password?' link on the login page. Enter your registered email address, and we will send you a link to set a new password."
+  },
+  {
+    "id": "password_lockout",
+    "category": "Reset Password",
+    "topic": "Account Locked",
+    "content": "For security reasons, your account will be locked after 5 failed login attempts. You can unlock it by resetting your password or waiting 30 minutes."
+  },
+  {
+    "id": "product_specs_battery",
+    "category": "Product Specs",
+    "topic": "Battery Life",
+    "content": "The Laptop X features a high-capacity battery that provides up to 12 hours of mixed usage on a single charge."
+  },
+  {
+    "id": "product_specs_ram",
+    "category": "Product Specs",
+    "topic": "Memory (RAM)",
+    "content": "The standard model comes with 16GB of DDR4 RAM. It is upgradeable to 32GB."
+  },
+  {
+    "id": "product_specs_warranty",
+    "category": "Product Specs",
+    "topic": "Warranty Information",
+    "content": "All our hardware products come with a standard 1-year limited warranty covering manufacturing defects. Extended warranty plans are available for purchase."
+  },
+  {
+    "id": "refund_damaged",
+    "category": "Refund Policy",
+    "topic": "Damaged or Defective Items",
+    "content": "If you receive a damaged or defective item, please contact our support team immediately with photos of the damage. We will arrange for a replacement or a full refund at no extra cost."
+  },
+  {
+    "id": "shipping_costs",
+    "category": "Shipping Status",
+    "topic": "Shipping Costs",
+    "content": "Standard shipping is free on orders over $50. For orders under $50, a flat rate of $9.99 applies. Expedited shipping options are calculated at checkout."
+  },
+  {
+    "id": "shipping_customs",
+    "category": "Shipping Status",
+    "topic": "International Customs",
+    "content": "For international orders, customs duties and taxes may apply upon arrival in your country. These fees are the responsibility of the recipient."
+  },
+  {
+    "id": "product_specs_screen",
+    "category": "Product Specs",
+    "topic": "Screen Specifications",
+    "content": "The Laptop X features a 15.6-inch 4K UHD OLED display with a resolution of 3840 x 2160 pixels and 100% sRGB color gamut coverage."
+  },
+  {
+    "id": "product_specs_processor",
+    "category": "Product Specs",
+    "topic": "Processor",
+    "content": "It is powered by the latest Gen AI-9 Processor with 12 cores and 24 threads, reaching boost speeds of up to 5.2 GHz."
+  },
+  {
+    "id": "product_specs_storage",
+    "category": "Product Specs",
+    "topic": "Storage Options",
+    "content": "Storage options include 512GB, 1TB, or 2TB of ultra-fast NVMe SSD storage."
+  }
+]

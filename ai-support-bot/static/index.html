@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Support | Help Center</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="app-container">
+        <header class="chat-header">
+            <div class="logo-area">
+                <div class="logo-icon">🤖</div>
+                <div>
+                    <h1>Support Assistant</h1>
+                    <span class="status-dot"></span> <span class="status-text">Online</span>
+                </div>
+            </div>
+            <div class="header-actions">
+                <button id="new-chat-btn" class="icon-btn" title="New Chat">
+                    <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M23 4v6h-6"></path>
+                        <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path>
+                    </svg>
+                </button>
+                <button class="menu-btn icon-btn">⋮</button>
+            </div>
+        </header>
+
+        <main class="chat-area" id="chat-container">
+            <div class="message bot-message">
+                <div class="avatar">🤖</div>
+                <div class="message-content">
+                    <p>Hello! I'm your AI Support Assistant. I can help with refunds, shipping, product details, and
+                        more. How can I help you today?</p>
+                    <span class="timestamp">Just now</span>
+                </div>
+            </div>
+            <!-- Messages will be appended here -->
+        </main>
+
+        <footer class="input-area">
+            <input type="text" id="user-input" placeholder="Type your message here..." autocomplete="off">
+            <button id="send-btn" disabled>
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                    <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path>
+                </svg>
+            </button>
+        </footer>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+
+</html>
